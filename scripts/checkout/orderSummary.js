@@ -1,4 +1,4 @@
-import { cart, removeFromCart, calculateCartQuantity, updateDeliveryOption } from '../../data/cart.js';
+import { cart, removeFromCart, calculateCartQuantity, updateQuantity, updateDeliveryOption } from '../../data/cart.js';
 import { products, getProduct } from '../../data/products.js';
 import { formatCurrency } from '../utils/money.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
@@ -105,21 +105,21 @@ export function renderOrderSummary() {
     <div class="delivery-option js-delivery-option"
       data-product-id="${matchingProduct.id}"
       data-delivery-option-id="${deliveryOption.id}">
-                  <input type="radio"
-                    ${isChecked ? 'checked' : ''}
-                    class="delivery-option-input"
-                    name="delivery-option-${matchingProduct.id}">
-                  <div>
-                    <div class="delivery-option-date">
-                      ${dateString}
-                    </div>
-                    <div class="delivery-option-price">
-                      ${priceString} Shipping
-                    </div>
-                  </div>
-                </div>
+      <input type="radio"
+        ${isChecked ? 'checked' : ''}
+        class="delivery-option-input"
+        name="delivery-option-${matchingProduct.id}">
+      <div>
+          <div class="delivery-option-date">
+          ${dateString}
+          </div>
+          <div class="delivery-option-price">
+          ${priceString} Shipping
+          </div>
+      </div>
+    </div>
     
-    `
+   `;
 
     });
     return html;
@@ -131,7 +131,7 @@ export function renderOrderSummary() {
   document.querySelectorAll('.js-delete-link')
     .forEach((link) => {
       link.addEventListener('click', () => {
-        const productId = link.dataset.productId;
+        const { productId } = link.dataset;
         removeFromCart(productId);
 
         const container = document.querySelector(
@@ -157,8 +157,8 @@ export function renderOrderSummary() {
   document.querySelectorAll('.js-update-link')
     .forEach((link) => {
       link.addEventListener('click', () => {
-        const productId = link.dataset.productId;
-        
+        const { productId } = link.dataset;
+
         const container = document.querySelector(
           `.js-cart-item-container-${productId}`
         );
@@ -169,13 +169,24 @@ export function renderOrderSummary() {
   document.querySelectorAll('.js-save-link')
     .forEach((link) => {
       link.addEventListener('click', () => {
-        const productId = link.dataset.productId;
-
+        const { productId } = link.dataset;
+        
         const quantityInput = document.querySelector(
           `.js-quantity-input-${productId}`
         );
         const newQuantity = Number(quantityInput.value);
-        updateCartQuantity(productId, newQuantity);
+        
+        if (newQuantity < 0 || newQuantity >= 1000) {
+          alert('Quantity must be at least 0 and less than 1000');
+          return;
+        }
+
+        updateQuantity(productId, newQuantity);
+
+        const container = document.querySelector(
+          `.js-cart-item-container-${productId}`
+        );
+        container.classList.remove('is-editing-quantity');
 
         const quantityLabel = document.querySelector(
           `.js-quantity-label-${productId}`
@@ -185,13 +196,12 @@ export function renderOrderSummary() {
         updateCartQuantity();
       });
     });
-        
+
 
   document.querySelectorAll('.js-delivery-option')
     .forEach((element) => {
       element.addEventListener('click', () => {
-        const productId = element.dataset.productId;
-        const deliveryOptionId = element.dataset.deliveryOptionId;
+        const { productId, deliveryOptionId } = element.dataset;
         updateDeliveryOption(productId, deliveryOptionId);
         renderOrderSummary();
         renderPaymentSummary();
