@@ -30,6 +30,7 @@ export function renderOrderSummary() {
 
     cartSummaryHTML += `
     <div class="cart-item-container 
+      js-cart-item-container
       js-cart-item-container-${matchingProduct.id}">
             <div class="delivery-date">
               Delivery date: ${dateString}
@@ -170,12 +171,12 @@ export function renderOrderSummary() {
     .forEach((link) => {
       link.addEventListener('click', () => {
         const { productId } = link.dataset;
-        
+
         const quantityInput = document.querySelector(
           `.js-quantity-input-${productId}`
         );
         const newQuantity = Number(quantityInput.value);
-        
+
         if (newQuantity < 0 || newQuantity >= 1000) {
           alert('Quantity must be at least 0 and less than 1000');
           return;
