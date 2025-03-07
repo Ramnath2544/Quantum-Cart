@@ -51,7 +51,7 @@ export function renderOrderSummary() {
                   <span>
                     Quantity: <span class="quantity-label 
                       js-quantity-label-${matchingProduct.id}">
-                    ${cartItem.quantity}</span>
+                       ${cartItem.quantity}</span>
                   </span>
                   <span class="update-quantity-link link-primary js-update-link"
                     data-product-id="${matchingProduct.id}">
@@ -152,8 +152,6 @@ export function renderOrderSummary() {
     document.querySelector('.js-return-to-home-link')
       .innerHTML = `${cartQuantity} items`;
   }
-
-  updateCartQuantity();
 
   document.querySelectorAll('.js-update-link')
     .forEach((link) => {
