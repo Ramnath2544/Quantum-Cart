@@ -54,7 +54,7 @@ https://github.com/user-attachments/assets/134218d7-f4bb-4dd2-b279-85e25a5f7e59
 
 **<h3>1.	Clone the repository:</h3>**
 
-  git clone https://github.com/Ramnath/Quantum-Cart.git cd Quantum-Cart
+  git clone https://github.com/Ramnath-DTU/Quantum-Cart.git
 
 **<h3>2.	Open index.html in your browser:</h3>**
 
