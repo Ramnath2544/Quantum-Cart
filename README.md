@@ -16,6 +16,8 @@ This project is a modern ecommerce web application built with HTML, CSS, JavaScr
 
 ### •	 <ins>Tech Stack</ins>
 
+### •	 <ins>Preview</ins>
+
 ### •	 <ins>Contributing</ins>
 
 ### •	 <ins>Contact</ins>
@@ -80,6 +82,17 @@ https://github.com/user-attachments/assets/134218d7-f4bb-4dd2-b279-85e25a5f7e59
 •	**Testing:** Jasmine
 
 •	**Backend (optional):** Node.js/Express (for order and product APIs)
+
+## 📸 Preview 
+
+<img width="797" height="847" alt="1" src="https://github.com/user-attachments/assets/83a767c2-54ae-471a-8cad-ad0a774d931f" />
+<img width="797" height="847" alt="2" src="https://github.com/user-attachments/assets/1feb35e3-921e-482f-99e0-eab7531d30dd" />
+<img width="799" height="847" alt="3" src="https://github.com/user-attachments/assets/d47fbc19-b7f4-4de3-a232-7566e6c0947b" />
+<img width="1919" height="1016" alt="4" src="https://github.com/user-attachments/assets/999544ac-3c33-4609-a5cb-4a46539546c5" />
+<img width="1919" height="1019" alt="5" src="https://github.com/user-attachments/assets/8836661d-3f37-4143-9821-440458c8b2a7" />
+<img width="1919" height="1016" alt="6" src="https://github.com/user-attachments/assets/eeede82f-febb-4412-8ee6-5a1015f7f8a9" />
+<img width="1919" height="1020" alt="7" src="https://github.com/user-attachments/assets/f8f05b92-b985-4c65-9eac-28868759700b" />
+<img width="1919" height="1009" alt="8" src="https://github.com/user-attachments/assets/203cf831-44e5-42a6-8151-596b198c3a41" />
 
 **<h2>Contributing</h2>**
 We welcome contributions! Please fork the repository and submit a pull request. For major changes, open an issue first to discuss what you would like to change.
