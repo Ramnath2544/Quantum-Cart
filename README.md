@@ -82,8 +82,6 @@ OOP
 
 •	**Testing:** Jasmine
 
-•	**Backend (optional):** Node.js/Express (for order and product APIs)
-
 ## 📸 Preview 
 
 <img width="797" height="847" alt="1" src="https://github.com/user-attachments/assets/83a767c2-54ae-471a-8cad-ad0a774d931f" />
