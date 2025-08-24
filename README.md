@@ -77,8 +77,7 @@ https://github.com/user-attachments/assets/134218d7-f4bb-4dd2-b279-85e25a5f7e59
 
 **<h2>Tech Stack</h2>**
 
-•	**Stack:**  HTML, CSS, JavaScript(ES6+), Express.js, Node.js, Rest APIs, Database and 
-OOP
+•	**Stack:**  HTML, CSS, JavaScript(ES6+)
 
 •	**Testing:** Jasmine
 
