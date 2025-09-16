@@ -50,7 +50,11 @@ This project is a modern ecommerce web application built with HTML, CSS, JavaScr
 
 
 
-https://github.com/user-attachments/assets/134218d7-f4bb-4dd2-b279-85e25a5f7e59
+
+
+https://github.com/user-attachments/assets/17ad21e8-918a-451c-9892-017275086fc9
+
+
 
 
 
